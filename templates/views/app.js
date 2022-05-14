@@ -11,7 +11,7 @@ fetch('http://puzzle.mead.io/puzzle').then((res) => {
 })
 
 getWeatherData = (data) => {
-    url = 'http://localhost:3000/weather?address=' + data ;
+    url = '/weather?address=' + data ;
 fetch(url).then((res) => {
     res.json().then((data) => {
         if (data.error) {
