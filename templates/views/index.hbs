@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <style>
+            form {
+                border : 1px solid #cccccc;
+                padding: 8px;
+            }
+            .button-value {
+                cursor: pointer;
+                border: 1x solid #888888;
+                background: #888888;
+                color: white;
+                padding: 8px;
+            }
+        </style>
+        <link rel="stylesheet" href="../../public/css/styles.css">
+    </head>
+    <body>
+        {{>header}}
+         <h2>Created By {{name}}</h2>
+         <p>Use this site to get your weather</p>
+
+         <form>
+             <input placeholder="location">
+             <button class="button-value">Search</button>
+         </form>
+         <p id="address"></p>
+         <p id="forecost"></p>
+         {{>footer}}
+      <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
