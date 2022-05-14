@@ -11,7 +11,19 @@ fetch('http://puzzle.mead.io/puzzle').then((res) => {
     })
 });
 
-fetch('http://localhost:3000/weather?address=tirupati').then((res) => {
+// for local
+// fetch('http://localhost:3000/weather?address=tirupati').then((res) => {
+//     res.json().then((data) => {
+//         if (data.error) {
+//             console.log(error);
+//         } else {
+//             console.log(data);
+//         }
+//     })
+// })
+
+//for heroku
+fetch('/weather?address=tirupati').then((res) => {
     res.json().then((data) => {
         if (data.error) {
             console.log(error);
