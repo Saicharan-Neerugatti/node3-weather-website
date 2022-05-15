@@ -9,8 +9,9 @@ const request = require('request');
              callback('unable to fetch the location', undefined);
          } else {
             const data = response.body;
+            console.log('sai', data.current);
              callback(undefined, {
-             data : data.current.weather_descriptions[0]+'. It is currently ' +  data.current.temperature + ' there is a ' + data.current.precip + ' chances of rain'
+             data : data.current.weather_descriptions[0]+'. It is currently ' +  data.current.temperature + ' there is a ' + data.current.precip + ' chances of rain. And the humidity is ' + data.current.humidity + '%'
              }
               )
          }
